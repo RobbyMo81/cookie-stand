@@ -1,0 +1,50 @@
+body{
+  background-color: rgb(199, 199, 221);
+}
+nav{
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(230, 128, 114);
+}
+#navbox{
+
+}
+div{
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/*index div ids */
+/*#visitorcontent, #storeinformation, #storelocations{
+
+}*/
+#visitorcontent{
+  background-color: rgb(260, 100,223);
+  margin-top: 52px;
+  height: ;
+}
+.storeinformation{
+  background-color: rgb(199, 199, 221);
+  margin-top: 350px;
+
+}
+.storelocations{
+  background-color: rgb(90, 120, 203);
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 0, 223);
+}
+footer{
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(230, 128, 114);
+}
+#footerbox{
+  
+}
