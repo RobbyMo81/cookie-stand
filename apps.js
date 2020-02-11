@@ -6,30 +6,111 @@
 
 //application needs to be easily modified
 
-//this will be the store hours
-
+//Time array 
 var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', 
-             '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
+            '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 
-var location = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+//Seattle store with 
 
-function getRandomInt (max) {
-  return Math.floor(Math.random() * Math.floor(max));
+var seattle = {
+//Seattle store with 
+  minCustomer : 23,
+  maxCustomer : 65,
+  averageCookies : 6.3,
 }
-getRandomInt(800)
-var storeLocation {
-  location: 'cookies',
-  custumer : 'numberOfCustomers',
-  cookies : 'numberOfCookies',
-  hourOfOperations : 'hour',
-  largeCustomer : 'maximumNumberOfCustomer',
-  smallCustomer : 'minimumNumberOfCustomer',
-  cookiesSold : 'averageCookiesSold',
+var seattleArray = [];
+
+function seattleNumberGenerator (minCustomer, maxCustomer){
+
+  minCustomer = Math.ceil(minCustomer);
+  maxCustomer = Math.ceil(maxCustomer);
+
+  return Math.floor(Math.random() * (maxCustomer - minCustomer))+minCustomer;
+}
+seattleNumberGenerator(seattle);
+//for loop to place items in array. loop is using the length of the time array above
+
+for (var i =0; i<hours.length; i++){
+  var seattleNum = seattleNumberGenerator(seattle.minCustomer,seattle.maxCustomer);
+  var seattleCalculation = seattleNum * seattle.averageCookies;
+  seattleArray.push(seattleCalculation);
+
+  console.log('this is the seattle number ' + seattleNum);
+  console.log('this is the seattle calculations ' + seattleCalculation);
 }
 
-function randomCookies (){
-  let customerNum = 
-}
+//this is all the location arrays
+
+
+//results of the randomized numbers
+console.log('this is the seattle array ' + seattleArray);
+
+//store function call
+
+
+
+
+
+
+  
+  
+
+
+
+//this will be the store hours
+// 
+
+
+// function getRandomInt (max) {
+//   return Math.floor(Math.random(0) * Math.floor(1000));
+// }
+// // object property
+// var seattlestore = {
+//   minimumHourlyCustomer : "",
+//   maximumHourlyCustomer : "",
+//   averageCookiesPerCustomer : "",
+  
+// }
+
+
+// //use a method of object to generate a random number of customers per hour
+// var seattle = {
+//   minimumHourlyCustomer : 100,
+//   maximumHourlyCustomer : 20,
+//   averageCookiesPerCustomer : 3,
+   
+//     cookiesPerCustomer : function () {
+//       return this.minimumHourlyCustomer + '' + this.averageCookiesPerCustomer;
+
+//     }
+// };
+// console.log ('min. customer ' + minimumHourlyCustomer)
+// console.log ('cookies ' +averageCookiesPerCustomer)
+
+// 
+
+// var location = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+
+
+// }
+// getRandomInt(800)
+// var storeLocation = {
+//   location: 'cookies',
+//   custumer : 'numberOfCustomers',
+//   cookies : 'numberOfCookies',
+//   hourOfOperations : 'hour',
+//   largeCustomer : 'maximumNumberOfCustomer',
+//   smallCustomer : 'minimumNumberOfCustomer',
+//   cookiesSold : 'averageCookiesSold',
+// }
+
+// for (var i = 0; i < location.length; i++) {
+//   // create a store for each location?
+// }
+
+// function randomCookies (){
+//   let customerNum = max 
+// }
 
 // for each day create a new branch of the lab using the following naming conventions class##-feature
 
