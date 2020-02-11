@@ -6,18 +6,102 @@
 
 //application needs to be easily modified
 
+//all store Arrays are here 
+var seattleArray = [];
+var tokyoArray = [];
+var dubaiArray = [];
+var parisArray = [];
+var limaArray = [];
+
 //Time array 
 var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', 
             '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 //future use city array
 var city = [seattle, tokyo, dubai, paris, lima]
 
-//all store Arrays are here
-var seattleArray = [];
-var tokyoArray = [];
-var dubaiArray = [];
-var parisArray = [];
-var limaArray = [];
+//nested of store information  
+//the inner array is setup as position 0 is name, position 1 is Min/Cust, position 2 is Max/Cust, position 3 is AvgCookie/Sale 
+var storeStatus = [ ['Seattle', 23, 65, 6.3], ['Tokyo', 3, 24,1.2], ['Dubai', 11, 38, 3.7], ['Paris', 20, 38, 2.3], ['Lima', 2, 16, 4.6] ];
+
+//loop in the nest of store information this will be like a vlookup
+for (let outerStoreStatus = 0; outerStoreStatus < storeStatus.length; outerStoreStatus ++) {
+  
+  for (let innerStoreValue = 0; innerStoreValue < storeStatus[0].length; innerStoreValue ++){
+    var mincust = randomNumberGenerator(storeStatus,);
+    var seattleCalculation = seattleNum * seattle.averageCookies;
+    seattleArray.push(seattleCalculation);
+  }
+}
+
+
+
+
+
+
+
+function randomNumberGenerator (minCustomer, maxCustomer){
+
+  minCustomer = Math.ceil(minCustomer);
+  maxCustomer = Math.floor(maxCustomer);
+
+  return Math.floor(Math.random() * (maxCustomer - minCustomer)+minCustomer);
+}
+
+
+//random number generator
+function randomNumberGenerator (minCustomer, maxCustomer){
+
+  minCustomer = Math.ceil(minCustomer);
+  maxCustomer = Math.floor(maxCustomer);
+
+  return Math.floor(Math.random() * (maxCustomer - minCustomer)+minCustomer);
+}
+randomNumberGenerator(seattle);
+randomNumberGenerator(tokyo);
+randomNumberGenerator(dubai);
+randomNumberGenerator(paris);
+randomNumberGenerator(lima);
+
+
+
+//store are build here
+for (var i =0; i<hours.length; i++){
+  //seattle
+    var seattleNum = randomNumberGenerator(storeStatus,seattle.maxCustomer);
+    var seattleCalculation = seattleNum * seattle.averageCookies;
+    seattleArray.push(seattleCalculation);
+  //tokyo
+    var tokyoNum = randomNumberGenerator(tokyo.minCustomer,tokyo.maxCustomer);
+    var tokyoCalculation = tokyoNum * tokyo.averageCookies;
+    tokyoArray.push(tokyoCalculation);
+  //dubai
+    var dubaiNum = randomNumberGenerator(dubai.minCustomer,dubai.maxCustomer);
+    var dubaiCalculation = dubaiNum * dubai.averageCookies;
+    dubaiArray.push(dubaiCalculation);
+    //paris
+    var parisNum = randomNumberGenerator(paris.minCustomer,paris.maxCustomer);
+    var parisCalculation = parisNum * paris.averageCookies;
+    parisArray.push(parisCalculation);
+    //paris
+    var limaNum = randomNumberGenerator(lima.minCustomer,lima.maxCustomer);
+    var limaCalculation = limaNum * lima.averageCookies;
+    limaArray.push(limaCalculation);
+
+
+
+// constructor for stores
+function Location (name, mincust, maxcust, avgcust) {
+  this.name = name;
+  this.mincust = mincust;
+  this.maxcust = maxcust;
+  this.avgcust = avgcust;
+}
+
+
+
+    
+
+
 
 
 var seattle = {
@@ -55,41 +139,10 @@ var lima = {
   averageCookies : 4.6,
 }
 
-function randomNumberGenerator (minCustomer, maxCustomer){
 
-  minCustomer = Math.ceil(minCustomer);
-  maxCustomer = Math.ceil(maxCustomer);
-
-  return Math.floor(Math.random() * (maxCustomer - minCustomer))+minCustomer;
-}
-randomNumberGenerator(seattle);
-randomNumberGenerator(tokyo);
-randomNumberGenerator(dubai);
-randomNumberGenerator(paris);
-randomNumberGenerator(lima);
 //for loop to place items in array. loop is using the length of the time array above
 
-for (var i =0; i<hours.length; i++){
-//seattle
-  var seattleNum = randomNumberGenerator(seattle.minCustomer,seattle.maxCustomer);
-  var seattleCalculation = seattleNum * seattle.averageCookies;
-  seattleArray.push(seattleCalculation);
-//tokyo
-  var tokyoNum = randomNumberGenerator(tokyo.minCustomer,tokyo.maxCustomer);
-  var tokyoCalculation = tokyoNum * tokyo.averageCookies;
-  tokyoArray.push(tokyoCalculation);
-//dubai
-  var dubaiNum = randomNumberGenerator(dubai.minCustomer,dubai.maxCustomer);
-  var dubaiCalculation = dubaiNum * dubai.averageCookies;
-  dubaiArray.push(dubaiCalculation);
-  //paris
-  var parisNum = randomNumberGenerator(paris.minCustomer,paris.maxCustomer);
-  var parisCalculation = parisNum * paris.averageCookies;
-  parisArray.push(parisCalculation);
-  //paris
-  var limaNum = randomNumberGenerator(lima.minCustomer,lima.maxCustomer);
-  var limaCalculation = limaNum * lima.averageCookies;
-  limaArray.push(limaCalculation);
+
   
 
 

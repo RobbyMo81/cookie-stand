@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/molap/codefellows"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cookie-stand"
+	}
+}
