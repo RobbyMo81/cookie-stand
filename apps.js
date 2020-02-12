@@ -24,7 +24,7 @@ var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:',
 var cookieShopes =['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
 
 //this is an empty array for stores
-var emptyArray = [];
+var seatleArray = [];
 
 //this is where the constructor function lives
 function StoreInformation (name, minCustomer, maxCustomer, avgCookie){
@@ -87,8 +87,27 @@ var boxInfo;
 row = document.createElement('tr');
 table.appendChild(row);
 
+//this is the store name
 var boxInfo = document.createElement('td');
-boxInfo.textContent = 0 ;
+boxInfo.textContent = seattle.name;
+row.appendChild(boxInfo);
+
+//this is the store Minimum Customer numbers
+var boxInfo = document.createElement('td');
+boxInfo.textContent = seattle.minCustomer;
+row.appendChild(boxInfo);
+
+//this is the store Maximum Customer numbers
+var boxInfo = document.createElement('td');
+boxInfo.textContent = seattle.maxCustomer;
+row.appendChild(boxInfo);
+
+//this is the store Average Customer Cookies numbers
+var boxInfo = document.createElement('td');
+boxInfo.textContent = seattle.avgCookie;
+row.appendChild(boxInfo);
+
+
 
 
 
@@ -109,12 +128,12 @@ boxInfo.textContent = 0 ;
 
 
 
-// var seattle = {
-// //Seattle store 
-//   minCustomer : 23,
-//   maxCustomer : 65,
-//   averageCookies : 6.3,
-// }
+var seattleOne = {
+//Seattle store 
+  minCustomer : 23,
+  maxCustomer : 65,
+  averageCookies : 6.3,
+}
 
 // //tokyo store
 // var tokyo = {
@@ -144,15 +163,16 @@ boxInfo.textContent = 0 ;
 //   averageCookies : 4.6,
 // }
 
-// //calculates the numbers given and produces a random number. the math part is a built infunction in JS
-// function randomNumberGenerator (minCustomer, maxCustomer){
+//calculates the numbers given and produces a random number. the math part is a built infunction in JS
+function randomNumberGenerator (minCustomer, maxCustomer){
 
-//   minCustomer = Math.ceil(minCustomer);
-//   maxCustomer = Math.ceil(maxCustomer);
+   minCustomer = Math.ceil(minCustomer);
+   maxCustomer = Math.ceil(maxCustomer);
 
-//   return Math.floor(Math.random() * (maxCustomer - minCustomer))+minCustomer;
-// }
-// randomNumberGenerator(seattle);
+return Math.floor(Math.random() * (maxCustomer - minCustomer))+minCustomer;
+ }
+randomNumberGenerator(seattleOne);
+console.log ('random ' + seattleOne);
 // randomNumberGenerator(tokyo);
 // randomNumberGenerator(dubai);
 // randomNumberGenerator(paris);

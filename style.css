@@ -1,3 +1,10 @@
+/*css reset was found here  https://www.webdesigndev.com/delete-browser-default-settings-css/*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body{
   background-color: rgb(199, 199, 221);
 }
@@ -39,6 +46,20 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
   color: rgb(0, 0, 223);
 }
+
+th, td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  width: 100px;
+}
+
 footer{
   height: 50px;
   width: 100%;
