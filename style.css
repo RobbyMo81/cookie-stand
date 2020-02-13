@@ -1,50 +1,144 @@
-body{
-  background-color: rgb(199, 199, 221);
-}
-nav{
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  background-color: rgb(230, 128, 114);
-}
-#navbox{
+  body{
+    margin: 0;
+    padding: 0;
+    border:0;
+    height: 2000px;
+    /*background-color: rgb(240,255,200);*/
+  }
+  p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start:0;
+    margin-inline-end:0;
+    padding: 0;
+    border: 0;
+    display: inline-block;
+    
+  }
+/* got the nav bar here  html information for nav bars found here https://www.w3schools.com/css/css_navbar.asp*/
+  header {
+    width: 100%;
+    background-color: rgb(59, 64, 57);
+  }
 
-}
-div{
-  position: absolute;
-  height: 200px;
-  width: 100%;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-/*index div ids */
-/*#visitorcontent, #storeinformation, #storelocations{
+  nav{
+    float: none;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: 960px;
+    
+  }
 
-}*/
-#visitorcontent{
-  background-color: rgb(260, 100,223);
-  margin-top: 52px;
-  height: ;
-}
-.storeinformation{
-  background-color: rgb(199, 199, 221);
-  margin-top: 350px;
+  header nav ul li{
+    list-style-type: none;
+    padding: 1px;
+    
+  }
 
-}
-.storelocations{
-  background-color: rgb(90, 120, 203);
-}
+  header nav ul {
+    display: inline-block;
+  }
 
-h1 {
-  font-family: 'Courier New', Courier, monospace;
-  color: rgb(0, 0, 223);
-}
-footer{
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  background-color: rgb(230, 128, 114);
-}
-#footerbox{
+ 
+  ul{
+    vertical-align: center;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li{
+    float: left;
+    height: 70px;
+    width: 200px;
+  }
+
+  li a{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: 26px;
+  }
+  li a:hover{
+    background-color: rgb(66, 245, 132); 
+  }
+
+  header nav ul li img {
+    width: 200px;
+    height: 70px;
+
+/*the code bellow is for the top box that has for elements  hero960x450 and three elements with a size of300x375*/
+
+/* this has the hero picture*/
+  }
+  main{
+    margin: 0 auto;
+    width: 960px;
+    height: 2000px;
+    background-color: rgb(70, 235, 223) ;
+  }
+  main div section{
+    background-color: rgb(224, 230, 184);
+    width: 100%;
+    height: 920px;
+  }
+  main div img {
+    width: 960px;
+    height: 450px;
+    background-color: rgb(125, 134, 219);
+  }
   
+  
+
+  /*this will have the section with the table data*/
+
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /*main div img #bannerleft{
+    
+footer{
+    background-color: rgb(59, 64, 57);
+    width: 100%;
+    height: 300px;
+  }
+ /*
+
 }
+
+
+  main div img #bannercenter{
+    background-color: rgb(125, 11, 219);
+    width: 300px;
+    height: 375px;
+    padding: 100px;
+  }
+
+  main div img #bannerright{
+    background-color: rgb(125, 134, 21);
+    width: 300px;
+    height: 375px;
+    padding: 0 auto;
+  }
+
+  main div img #bottomleft{
+    position:absolute ;
+    display: inline-block;
+    width: calc(50% );
+    height: 375px;
+  }
+
+  main div span.bottomright{
+    position: absolute;
+    text-align: justify;
+    display: inline-block;
+    width: 300px;
+    height: 375px;
+    
+  }*/
+
