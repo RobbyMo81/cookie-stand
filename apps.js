@@ -127,7 +127,159 @@ for (var i = 0; i < totalStores.length; i++) {
 
 
 
+//Conditions for the test
+// coookies to make depends on hours of operations (6pm to 8pm) all locations
+//each location will have minimum number of customers per hour
+//maximum number of customers per hour
+//average number of cookies purchased per customer
 
+//application needs to be easily modified
+
+//Time array 
+var hours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', 
+            '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
+console.log (hours)
+//future use city array
+var city = [seattle, tokyo, dubai, paris, lima]
+
+console.log (city)
+//all store Arrays are here
+var seattleArray = [];
+var tokyoArray = [];
+var dubaiArray = [];
+var parisArray = [];
+var limaArray = [];
+
+
+var seattle = {
+//Seattle store 
+  minCustomer : 23,
+  maxCustomer : 65,
+  averageCookies : 6.3,
+}
+
+//tokyo store
+var tokyo = {
+  minCustomer : 3,
+  maxCustomer : 24,
+  averageCookies : 1.2,
+}
+
+//dubai store
+var dubai = {
+  minCustomer : 11,
+  maxCustomer : 38,
+  averageCookies : 3.7,
+}
+
+//paris store
+var paris = {
+  minCustomer : 20,
+  maxCustomer : 38,
+  averageCookies : 2.3,
+}
+
+//lima store
+var lima = {
+  minCustomer : 2,
+  maxCustomer : 16,
+  averageCookies : 4.6,
+}
+
+
+//for loop to place items in array. loop is using the length of the time array above
+
+for (var i =0; i<hours.length; i++){
+//seattle
+  var seattleNum = randomNumberGenerator(seattle.minCustomer,seattle.maxCustomer);
+  var seattleCalculation = Math.floor(seattleNum * seattle.averageCookies);
+  seattleArray.push(seattleCalculation);
+//tokyo
+  var tokyoNum = randomNumberGenerator(tokyo.minCustomer,tokyo.maxCustomer);
+  var tokyoCalculation = Math.floor(tokyoNum * tokyo.averageCookies);
+  tokyoArray.push(tokyoCalculation);
+//dubai
+  var dubaiNum = randomNumberGenerator(dubai.minCustomer,dubai.maxCustomer);
+  var dubaiCalculation = Math.floor(dubaiNum * dubai.averageCookies);
+  dubaiArray.push(dubaiCalculation);
+  //paris
+  var parisNum = randomNumberGenerator(paris.minCustomer,paris.maxCustomer);
+  var parisCalculation = Math.floor(parisNum * paris.averageCookies);
+  parisArray.push(parisCalculation);
+  //paris
+  var limaNum = randomNumberGenerator(lima.minCustomer,lima.maxCustomer);
+  var limaCalculation = Math.floor(limaNum * lima.averageCookies);
+  limaArray.push(limaCalculation);
+  
+
+randomNumberGenerator(seattle);
+randomNumberGenerator(tokyo);
+randomNumberGenerator(dubai);
+randomNumberGenerator(paris);
+randomNumberGenerator(lima);
+
+//calculates the numbers given and produces a random number. the math part is a built infunction in JS
+function randomNumberGenerator (minCustomer, maxCustomer){
+
+  // minCustomer = Math.floor(minCustomer);
+  // maxCustomer = Math.ceil(maxCustomer);
+
+  return Math.floor(Math.random() * (maxCustomer - minCustomer) +minCustomer);
+}
+
+
+  //store logs
+  console.log('this is the seattle number ' + seattleNum);
+  console.log('this is the seattle calculations ' + seattleCalculation);
+
+  console.log('this is the seattle number ' + tokyoNum);
+  console.log('this is the seattle calculations ' + tokyoCalculation);
+
+  console.log('this is the seattle number ' + dubaiNum);
+  console.log('this is the seattle calculations ' + dubaiCalculation);
+
+  console.log('this is the seattle number ' + parisNum);
+  console.log('this is the seattle calculations ' + parisCalculation);
+
+  console.log('this is the seattle number ' + limaNum);
+  console.log('this is the seattle calculations ' + limaCalculation);
+}
+
+
+
+//results of the randomized numbers for stores
+console.log('this is the seattle array ' + seattleArray);
+console.log('this is the tokyo array ' + tokyoArray);
+console.log('this is the dubai array ' + dubaiArray);
+console.log('this is the paris array ' + parisArray);
+console.log('this is the lima array ' + limaArray);
+
+//store function call
+
+
+//this is where we are going to put this information in html
+
+//from js to html
+let list = document.getElementById ('storelocation')
+
+//add heading here we are making an element
+
+let heading = document.createElement('li');
+
+
+
+
+
+  
+  function CookieStandStore (name,minCust,maxCust,avgCookies) {
+    this.name = name;
+    this.minCust = minCust;
+    this.maxCust = maxCust;
+    this.avgCookies = avgCookies;
+  }
+  var seattle = new CookieStandStore ('Seattle', );
+
+var table =document.getElementById ('tablebody');
 
 
 

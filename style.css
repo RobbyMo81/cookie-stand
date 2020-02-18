@@ -5,6 +5,9 @@
     height: 1300px;
     /*background-color: rgb(240,255,200);*/
   }
+  #salesbody, #salestablebody {
+    height: 1000px;
+  }
   p{
     margin-block-start: 0;
     margin-block-end: 0;
@@ -18,7 +21,7 @@
 /* got the nav bar here  html information for nav bars found here https://www.w3schools.com/css/css_navbar.asp*/
   header {
     width: 100%;
-    height: 100px;
+    height: 150px;
     background-color: rgb(59, 64, 57);
     
   }
@@ -29,21 +32,18 @@
     display: flex;
     margin: 0 auto;
     width: 960px;
+    height: 100px;
     
   }
 
   header nav ul li{
     list-style-type: none;
-    
-    
   }
 
   header nav ul {
     display: inline-block;
-    vertical-align: center;
     list-style-type: none;
     margin: 0 auto;
-    padding: 0;
     overflow: hidden;
   }
 
@@ -58,16 +58,20 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
-    padding: 26px;
+    margin-top:51px;
+    font-size: 30px;
+    font-family: "Helvetica", sans-serif;
+    
   }
   li a:hover{
-    background-color: rgb(66, 245, 132); 
+    background-color: rgb(200, 128, 114); 
   }
 
-  header nav ul li img {
+  a #home { /*navbar image*/
+    margin-top: 31px;
     width: 200px;
     height: 70px;
-    
+    border-radius: 0px 32px 0px 0px;
   }
 /*the code bellow is for the top box that has for elements  hero960x450 and three elements with a size of300x375*/
 
@@ -77,88 +81,75 @@
     margin: 0 auto;
     width: 960px;
     height: 480px;
-    background-color: rgb(70, 235, 223);
+    background-color: rgb(250, 128, 114);
     margin-top: 30px;
   }
   main div section{
-    background-color: rgb(224, 230, 184);
     width: 100%;
     height: 920px;
   }
-  main div img {
+  #mascot {  /*hero image*/
+    border-radius: 10px 0px 10px 0px;
     width: 960px;
     height: 450px;
-    background-color: rgb(125, 134, 219);
   }
   
+  main {
+    border-radius: 20px 0px 0px 0px;
+    padding: 10px;
+  }
+  #mainpage{
+    height: 500px;
+  }
+  section {
+    border-radius: 0px 0px 20px 0px;
+    padding: 10px;
+  }
+
+  h1, h2{
+    text-align: center;
+    }
+  section p{
+    font-family: "Sriracha", cursive;
+  }
+
+  #footerparagraph {
+    color: rgb (255, 255, 255);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
   
 
   /*this will have the section with the table data*/
-  section{
+  section {
     border: 0;
     margin: 0 auto;
     width: 960px;
-    height: 500px;
-    background-color: rgb(170, 235, 223);
+    height: 400px;
+    background-color: rgb(250, 128, 114);
   }
+  table, th,td {/*unorder list*/
+    border: 1px rgb(255, 255, 255) solid;
+    
 
-  /*table{
-    border-collapse: collapse;
-    border-spacing: 0;
-  }*/
-  section h3{
-    text-align: center;
   }
-  section form{
+  
+  form{
     display: inline;
   }
+
   form input{
     height: 30px;
     width: 100px;
   }
 
   footer{
+    margin-top: 30px;
     display: inline-block;
     vertical-align: bottom;
     background-color: rgb(59, 64, 57);
     width: 100%;
     height: 100px;
   }
-  /*main div img #bannerleft{
-    
-f
- /*
-
-}
-
-
-  main div img #bannercenter{
-    background-color: rgb(125, 11, 219);
-    width: 300px;
-    height: 375px;
-    padding: 100px;
-  }
-
-  main div img #bannerright{
-    background-color: rgb(125, 134, 21);
-    width: 300px;
-    height: 375px;
-    padding: 0 auto;
-  }
-
-  main div img #bottomleft{
-    position:absolute ;
-    display: inline-block;
-    width: calc(50% );
-    height: 375px;
-  }
-
-  main div span.bottomright{
-    position: absolute;
-    text-align: justify;
-    display: inline-block;
-    width: 300px;
-    height: 375px;
-    
-  }*/
-
+  
