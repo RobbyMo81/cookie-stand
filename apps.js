@@ -10,6 +10,7 @@
     var tableHeader = document.getElementById('tableHeader');
     var table = document.getElementById('salesdata');
     var tableFooter = document.getElementById('totals')
+    var storeDailyAvg = document.getElementById('storeavg')
 
     var totalStores = [];
 
@@ -110,7 +111,7 @@
       tableHeader.appendChild(row);
       //table.appendChild(row);
     }///////// end of render city///////////////
-    console.log();
+    
 
     
     function randomNumberOfCustomers(min, max) {
@@ -186,6 +187,26 @@
     }
 
 
+    function renderStore(store, data) {
+    
+      var tableRow= document.createElement("tr");
+      tableRow.setAttribute("id", "mytr");
+      document.getElementById("storeavg").appendChild(tableRow);
+    
+      var talbeData = document.createElement("td");
+      var tableCell = document.createTextNode(store);
+      talbeData.appendChild(tableCell);
+      document.getElementById("mytr").appendChild(talbeData);
+
+      var talbeData = document.createElement("tr");
+      var tableCell = document.createTextNode(store);
+      talbeData.appendChild(tableCell);
+      document.getElementById("mytr").appendChild(talbeData);
+    }
+    renderStore(seattle,seattleCalculation);
+    renderStore(tokyoArray);
+
+
     //for loop to place items in array. loop is using the length of the time array above
 
     for (var i =0; i<hours.length; i++){
@@ -225,7 +246,6 @@
 
       return Math.floor(Math.random() * (maxCustomer - minCustomer) +minCustomer);
     }
-
 
       //store logs
       console.log('this is the seattle number ' + seattleNum);
